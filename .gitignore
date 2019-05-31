@@ -105,3 +105,4 @@ venv.bak/
 
 # node stuff
 node_modules/
+webpack-stats.json
