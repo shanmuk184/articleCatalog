@@ -1,0 +1,39 @@
+{
+  "name": "articlecatalog",
+  "version": "1.0.0",
+  "description": "NewsRoom ",
+  "main": "index.js",
+  "dependencies": {
+    "webpack-bundle-tracker": "^0.4.2-beta"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-hot-loader": "^4.8.8",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/shanmuk184/articleCatalog.git"
+  },
+  "author": "shanmuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shanmuk184/articleCatalog/issues"
+  },
+  "homepage": "https://github.com/shanmuk184/articleCatalog#readme"
+}
