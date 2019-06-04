@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'webpack_loader',
     'rest_framework',
-    'django_extensions'
+    'django_extensions',
+    'articles'
 
 ]
 
