@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.postgres',
     'webpack_loader',
     'rest_framework',
     'django_extensions',
@@ -71,7 +72,12 @@ TEMPLATES = [
         },
     },
 ]
-
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+        # 'rest_framework.authenticationication.SessionAuthentication',
+    )
+}
 WSGI_APPLICATION = 'articleCatalog.wsgi.application'
 
 
@@ -138,3 +144,6 @@ WEBPACK_LOADER = {
         'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json')
     }
 }
+
+CSRF_USER_SESSIONS = True
+CSRF_TRUSTED_ORIGINS =['localhost']
