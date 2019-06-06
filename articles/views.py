@@ -21,18 +21,12 @@ class ArticleView(View):
         return super(ArticleView, self).dispatch(request, *args, **kwargs)
 
     def get(self, request, *args, **kwargs):
+        query = request.GET['query']
+        # body = json.loads(query)
+
+        if query:
+            return HttpResponse(json.dumps(Handlers.createFilteredResponse(query)))
+
         groupedData = Handlers.groupedarticleHandler()
         return HttpResponse(json.dumps(groupedData[0][0]))
 
-
-    def post(self, request, *args, **kwargs):
-        query = request.body
-        body = json.loads(query)
-
-        return HttpResponse(json.dumps(Handlers.createFilteredResponse(body)))
-
-
-
-# class AggregationViewSet(viewsets.ModelViewSet):
-#     queryset = Article.objects.aggregate(ids=ArrayAgg('location'),)
-#

@@ -11,6 +11,3 @@
 ## Run reloading development server 
 ### python manage.py runserver
 ### node server.js
-
-
-

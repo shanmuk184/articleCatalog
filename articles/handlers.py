@@ -12,10 +12,10 @@ class Handlers():
             return data
 
     @staticmethod
-    def createFilteredResponse(body):
+    def createFilteredResponse(query):
         articleResult = Article.objects.annotate(
             search=SearchVector('job_title',
-                                'location', 'houseof'), ).filter(search=body.get('query'))
+                                'location', 'houseof'), ).filter(search=query)
         result = {}
         result['articles'] = list(articleResult.values())
         result['count'] = articleResult.count()
